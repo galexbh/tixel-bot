@@ -6,8 +6,8 @@
   "scripts": {
     "start": "node src/bot.js",
     "dev": "nodemon src/bot.js",
-    "docs": "jsdoc -c jsdoc.json",
     "clean": "rimraf docs",
+    "docs": "npm run clean && jsdoc -c jsdoc.json",
     "docs:deploy": "npm run clean && npm run docs && gh-pages -d docs"
   },
   "repository": {
@@ -21,8 +21,10 @@
   },
   "homepage": "https://github.com/galexbh/tixel-bot#readme",
   "devDependencies": {
+    "dotenv": "^8.2.0",
     "gh-pages": "^3.1.0",
     "jsdoc": "^3.6.6",
+    "nodemon": "^2.0.6",
     "rimraf": "^3.0.2",
     "tui-jsdoc-template": "^1.2.2"
   },
