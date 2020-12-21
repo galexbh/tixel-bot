@@ -1,0 +1,23 @@
+{
+    "source": {
+      "include": [
+        "src"
+      ],
+      "includePattern": ".js$",
+      "excludePattern": "(node_modules|docs)"
+    },
+    "plugins": [],
+    "templates": {
+      "cleverLinks": true,
+      "monospaceLinks": true,
+      "name": "Tixel Bot",
+      "footerText": "© Derechos Reservados galexbh, chucklagos & NHN Entertainment"
+    },
+    "opts": {
+      "recurse": true,
+      "destination": "./docs",
+      "template": "node_modules/tui-jsdoc-template",
+      "encoding": "utf8",
+      "readme": "./README.md"
+    }
+  }

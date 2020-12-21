@@ -1,0 +1,32 @@
+{
+  "name": "tixel-bot",
+  "version": "1.0.0",
+  "description": "Send feed to the channel https://t.me/TixelChannel",
+  "main": "src/bot.js",
+  "scripts": {
+    "start": "node src/bot.js",
+    "dev": "nodemon src/bot.js",
+    "docs": "jsdoc -c jsdoc.json",
+    "clean": "rimraf docs",
+    "docs:deploy": "npm run clean && npm run docs && gh-pages -d docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/galexbh/tixel-bot.git"
+  },
+  "author": "galexbh@protonmail.com, chucklagos17@protonmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/galexbh/tixel-bot/issues"
+  },
+  "homepage": "https://github.com/galexbh/tixel-bot#readme",
+  "devDependencies": {
+    "gh-pages": "^3.1.0",
+    "jsdoc": "^3.6.6",
+    "rimraf": "^3.0.2",
+    "tui-jsdoc-template": "^1.2.2"
+  },
+  "dependencies": {
+    "telegraf": "^3.38.0"
+  }
+}
