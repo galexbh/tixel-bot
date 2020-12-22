@@ -16,6 +16,10 @@
   },
   "author": "galexbh@protonmail.com, chucklagos17@protonmail.com",
   "license": "MIT",
+  "keywords": [
+    "telegram-bot",
+    "rss"
+  ],
   "bugs": {
     "url": "https://github.com/galexbh/tixel-bot/issues"
   },
@@ -29,6 +33,7 @@
     "tui-jsdoc-template": "^1.2.2"
   },
   "dependencies": {
+    "rss-parser": "^3.10.0",
     "telegraf": "^3.38.0"
   }
 }
