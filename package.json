@@ -33,7 +33,7 @@
     "tui-jsdoc-template": "^1.2.2"
   },
   "dependencies": {
-    "rss-parser": "^3.10.0",
-    "telegraf": "^3.38.0"
+    "rss-parser": "^3.12.0",
+    "telegraf": "^4.1.2"
   }
 }
