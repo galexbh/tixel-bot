@@ -23,14 +23,19 @@ bot.help((ctx) => {
   ctx.reply("ayuda");
 });
 
-async function rssfeed() {
+/**
+ * @param {string} url
+ *
+ */
+const rssFeed = async (url) => {
   try {
-    const { items } = await parser.parseURL("https://www.muylinux.com/feed/");
+    const { items } = await parser.parseURL(url);
     const [{ title, link }] = items;
     const lastArticule = `${title}\n${link}`;
+    /**/
   } catch (error) {
     console.log(error);
   }
-}
+};
 
 bot.launch();
