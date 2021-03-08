@@ -8,6 +8,7 @@
     "dev": "nodemon src/bot.js",
     "clean": "rimraf docs",
     "docs": "npm run clean && jsdoc -c jsdoc.json",
+    "bot:deploy": "node -r dotenv/config src/bot.js",
     "docs:deploy": "npm run clean && npm run docs && gh-pages -d docs"
   },
   "repository": {
