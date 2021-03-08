@@ -1,1 +1,1 @@
-worker: npm bot:deploy
+worker: npm start
