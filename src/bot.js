@@ -6,7 +6,7 @@ require("dotenv").config();
 /**
  * @see https://telegraf.js.org/#/
  */
-const { Telegraf } = require("telegraf");
+const {Telegraf} = require("telegraf");
 
 const bot = new Telegraf(process.env.BOT_TOKEN);
 
@@ -29,13 +29,17 @@ bot.help((ctx) => {
  */
 const rssFeed = async (url) => {
   try {
-    const { items } = await parser.parseURL(url);
-    const [{ title, link }] = items;
+    const {items} = await parser.parseURL(url);
+    const [{title, link}] = items;
     const lastArticule = `${title}\n${link}`;
-    /**/
+    return lastArticule;
   } catch (error) {
     console.log(error);
   }
-};
+}
+
+bot.command('test', (ctx) => {
+  rssFeed('https://www.muylinux.com/feed/').then(feed => ctx.reply(feed));
+})
 
 bot.launch();
