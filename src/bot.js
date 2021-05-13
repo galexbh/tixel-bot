@@ -10,11 +10,8 @@ const {Telegraf} = require("telegraf");
 
 const bot = new Telegraf(process.env.BOT_TOKEN);
 
-/**
- * @see https://www.npmjs.com/package/rss-parser
- */
-const Parser = require("rss-parser");
-const parser = new Parser();
+const rss = require("./rssFeed");
+const channel = require("./channel")
 
 bot.start((ctx) => ctx.reply("hola"));
 
@@ -23,23 +20,8 @@ bot.help((ctx) => {
   ctx.reply("ayuda");
 });
 
-/**
- * @param {string} url
- *
- */
-const rssFeed = async (url) => {
-  try {
-    const {items} = await parser.parseURL(url);
-    const [{title, link}] = items;
-    const lastArticule = `${title}\n${link}`;
-    return lastArticule;
-  } catch (error) {
-    console.log(error);
-  }
-}
-
 bot.command('test', (ctx) => {
-  rssFeed('https://www.muylinux.com/feed/').then(feed => ctx.reply(feed));
+  rss.getFeed('https://www.muylinux.com/feed/').then(feed => channel.sendMessageToChannel(feed));
 })
 
 bot.launch();
