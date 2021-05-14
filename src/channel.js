@@ -1,14 +1,12 @@
 const {Telegraf} = require("telegraf");
 
-const bot = new Telegraf(process.env.BOT_TOKEN);
-
 const chatId = process.env.CHANNEL_ID;
 
 /**
- * @param {string} msg
+ * @param {Telegraf} bot {string} msg
  *
  */
-const sendMessageToChannel = (msg) => {
+const sendMessageToChannel = (bot, msg) => {
   bot.telegram.sendMessage(chatId, msg);
 }
 
