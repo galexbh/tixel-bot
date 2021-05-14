@@ -21,14 +21,17 @@ bot.start((ctx) => {
 
 bot.help((ctx) => {
   /*console.log(ctx);*/
-  /*ctx.reply("ayuda");*/
+  ctx.reply(`
+  test the source
+  /test {url}
+  `);
   cron.initCron(bot);
 });
 
 bot.command('test', (ctx) => {
   try {
     rss.getFeed(ctx.message.text.slice(6)).
-      then(feed => channel.sendMessageToChannel(bot, feed));
+      then(feed => ctx.reply(feed));
   } catch (error) {
     throw error;
   }
