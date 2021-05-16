@@ -8,10 +8,11 @@
     "telegram-bot"
     ],
     "env": {
-    "BOT_TOKEN": {
-        "description": "api-token provided by botfather",
-    },
-    "CHANNEL_ID": {
-        "description": "Unique identifier for the target chat or username of the target channel (in the format @channelusername)",
+        "BOT_TOKEN": {
+            "description": "api-token provided by botfather"
+        },
+        "CHANNEL_ID": {
+            "description": "Unique identifier for the target chat or username of the target channel (in the format @channelusername)"
+        }
     }
 }
