@@ -1,6 +1,17 @@
 {
-  "name": "tixel-bot",
-  "description": "Send feed to the channel",
-  "repository": "https://github.com/galexbh/tixel-bot",
-  "keywords": ["node", "rss", "telegram-bot"]
+    "name": "tixel-bot",
+    "description": "Send feed to the channel",
+    "repository": "https://github.com/galexbh/tixel-bot",
+    "keywords": [
+    "node",
+    "rss",
+    "telegram-bot"
+    ],
+    "env": {
+    "BOT_TOKEN": {
+        "description": "api-token provided by botfather",
+    },
+    "CHANNEL_ID": {
+        "description": "Unique identifier for the target chat or username of the target channel (in the format @channelusername)",
+    }
 }
