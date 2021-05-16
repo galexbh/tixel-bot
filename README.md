@@ -8,7 +8,7 @@ This is a bot to provide feed through an RSS module to a telegram channel.
 
 ## Requirements
 
-- [`API TOKEN`](t.me/BotFather)
+- [`API TOKEN`](https://t.me/botfather)
 - `@channelusername`
 
 
