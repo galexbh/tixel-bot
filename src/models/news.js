@@ -1,16 +1,19 @@
-const {Sequelize, DataTypes} = require('sequelize');
-const sequelize = new Sequelize('sqlite::memory:');
+const {
+  Model,
+  DataTypes
+} = require('sequelize');
 
-const News = sequelize.define('News', {
-  // Model attributes are defined here
-  firstName: {
-    type: DataTypes.STRING,
-    allowNull: false
-  },
-  lastName: {
+const sequelize = require('../utils/database')
+
+class News extends Model {}
+
+News.init({
+  title: {
     type: DataTypes.STRING
-    // allowNull defaults to true
   }
 }, {
-  // Other model options go here
-});
+  sequelize,
+  modelName: 'news'
+})
+
+module.exports = News
